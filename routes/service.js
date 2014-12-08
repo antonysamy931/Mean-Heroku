@@ -7,8 +7,8 @@ var mongoose=require('mongoose');
 var multiparty=require('multiparty');
 var fs=require('fs');
 
-mongoose.connect("mongodb://localhost/Antony");
-
+//mongoose.connect("mongodb://localhost/Antony");
+mongoose.connect(ENV['dbcon']);
 var db=mongoose.connection;
 
 db.on('error',function(err){
